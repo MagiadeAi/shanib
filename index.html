@@ -80,100 +80,243 @@
     <section class="work" id="work">
         <div class="container">
             <h2 class="section-title fade-in">Selected Work</h2>
+
+            <!-- Work Category Filter Tabs -->
+            <div class="work-tabs fade-in">
+                <button type="button" class="tab-btn active" data-filter="all">All</button>
+                <button type="button" class="tab-btn" data-filter="ai-visuals">AI Visuals</button>
+                <button type="button" class="tab-btn" data-filter="live-shoots">Live Shoots</button>
+            </div>
+
             <div class="work-grid">
-                <!-- Video 1 -->
-                <div class="video-card fade-in">
+                <!-- 1. Live Shoot 1 -->
+                <div class="video-card fade-in" data-category="live-shoots">
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749541/Live_Shoot_-1_zdleen.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749541/Live_Shoot_-1_zdleen.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 2. AI Video 1 -->
+                <div class="video-card fade-in delay-1" data-category="ai-visuals">
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749547/Ai_Vid_-1_xuzsz4.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749547/Ai_Vid_-1_xuzsz4.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 3. Live Shoot 2 -->
+                <div class="video-card fade-in delay-2" data-category="live-shoots">
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749552/Live_Shoot_-2_s1ftel.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749552/Live_Shoot_-2_s1ftel.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 4. AI Video 16:9 Showcase 1 -->
+                <div class="video-card card-wide fade-in" data-category="ai-visuals">
+                    <span class="video-badge">Cinematic 16:9</span>
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749544/Ai_Video_16-9_Ratio_3_whktam.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749544/Ai_Video_16-9_Ratio_3_whktam.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 5. AI Video 2 -->
+                <div class="video-card fade-in" data-category="ai-visuals">
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749529/Ai_Vid_-2_qxa1tl.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749529/Ai_Vid_-2_qxa1tl.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 6. Live Shoot 3 -->
+                <div class="video-card fade-in delay-1" data-category="live-shoots">
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749543/Live_Shoot_-3_huvl8e.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749543/Live_Shoot_-3_huvl8e.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 7. Live Shoot 4 -->
+                <div class="video-card fade-in delay-2" data-category="live-shoots">
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749531/Live_Shoot_-4_y4lcmr.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749531/Live_Shoot_-4_y4lcmr.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 8. AI Video 16:9 Showcase 2 -->
+                <div class="video-card card-wide fade-in" data-category="ai-visuals">
+                    <span class="video-badge">Cinematic 16:9</span>
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749549/Ai_Video_16-9_Ratio_4_cts7dd.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749549/Ai_Video_16-9_Ratio_4_cts7dd.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 9. Live Shoot 5 -->
+                <div class="video-card fade-in" data-category="live-shoots">
+                    <video muted loop playsinline
+                        poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749541/Live_Shoot_-5_m825dp.jpg"
+                        preload="metadata">
+                        <source
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1790749541/Live_Shoot_-5_m825dp.mp4#t=0.001"
+                            type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <span class="play-indicator">Play preview</span>
+                    </div>
+                </div>
+
+                <!-- 10. AI Video (IMG_1043) -->
+                <div class="video-card fade-in delay-1" data-category="ai-visuals">
                     <video muted loop playsinline
                         poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523548/IMG_1043_rdp73t.jpg"
                         preload="metadata">
                         <source
-                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523548/IMG_1043_rdp73t.mov#t=0.001"
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523548/IMG_1043_rdp73t.mp4#t=0.001"
                             type="video/mp4">
                     </video>
                     <div class="video-overlay">
                         <span class="play-indicator">Play preview</span>
                     </div>
                 </div>
-                <!-- Video 2 -->
-                <div class="video-card fade-in delay-1">
+
+                <!-- 11. AI Video (IMG_0593) -->
+                <div class="video-card fade-in delay-2" data-category="ai-visuals">
                     <video muted loop playsinline
                         poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523508/IMG_0593_npsjf9.jpg"
                         preload="metadata">
                         <source
-                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523508/IMG_0593_npsjf9.mov#t=0.001"
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523508/IMG_0593_npsjf9.mp4#t=0.001"
                             type="video/mp4">
                     </video>
                     <div class="video-overlay">
                         <span class="play-indicator">Play preview</span>
                     </div>
                 </div>
-                <!-- Video 3 -->
-                <div class="video-card fade-in delay-2">
+
+                <!-- 12. AI Video (IMG_0905) -->
+                <div class="video-card fade-in" data-category="ai-visuals">
                     <video muted loop playsinline
                         poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523518/IMG_0905_fkcjkf.jpg"
                         preload="metadata">
                         <source
-                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523518/IMG_0905_fkcjkf.mov#t=0.001"
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523518/IMG_0905_fkcjkf.mp4#t=0.001"
                             type="video/mp4">
                     </video>
                     <div class="video-overlay">
                         <span class="play-indicator">Play preview</span>
                     </div>
                 </div>
-                <!-- Video 4 -->
-                <div class="video-card fade-in">
+
+                <!-- 13. AI Video (IMG_0444) -->
+                <div class="video-card fade-in delay-1" data-category="ai-visuals">
                     <video muted loop playsinline
                         poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523504/IMG_0444_jqhdig.jpg"
                         preload="metadata">
                         <source
-                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523504/IMG_0444_jqhdig.mov#t=0.001"
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523504/IMG_0444_jqhdig.mp4#t=0.001"
                             type="video/mp4">
                     </video>
                     <div class="video-overlay">
                         <span class="play-indicator">Play preview</span>
                     </div>
                 </div>
-                <!-- Video 5 -->
-                <div class="video-card fade-in delay-1">
+
+                <!-- 14. AI Video (IMG_0396) -->
+                <div class="video-card fade-in delay-2" data-category="ai-visuals">
                     <video muted loop playsinline
                         poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523524/IMG_0396_ybhkxg.jpg"
                         preload="metadata">
                         <source
-                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523524/IMG_0396_ybhkxg.mov#t=0.001"
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523524/IMG_0396_ybhkxg.mp4#t=0.001"
                             type="video/mp4">
                     </video>
                     <div class="video-overlay">
                         <span class="play-indicator">Play preview</span>
                     </div>
                 </div>
-                <!-- Video 6 -->
-                <div class="video-card fade-in delay-2">
+
+                <!-- 15. AI Video (IMG_0469) -->
+                <div class="video-card fade-in" data-category="ai-visuals">
                     <video muted loop playsinline
                         poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523481/IMG_0469_qdke2p.jpg"
                         preload="metadata">
                         <source
-                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523481/IMG_0469_qdke2p.mov#t=0.001"
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523481/IMG_0469_qdke2p.mp4#t=0.001"
                             type="video/mp4">
                     </video>
                     <div class="video-overlay">
                         <span class="play-indicator">Play preview</span>
                     </div>
                 </div>
-                <!-- Video 7 -->
-                <div class="video-card fade-in">
+
+                <!-- 16. AI Video (IMG_0501) -->
+                <div class="video-card fade-in delay-1" data-category="ai-visuals">
                     <video muted loop playsinline
                         poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523503/IMG_0501_b2ixdj.jpg"
                         preload="metadata">
                         <source
-                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523503/IMG_0501_b2ixdj.mov#t=0.001"
+                            src="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772523503/IMG_0501_b2ixdj.mp4#t=0.001"
                             type="video/mp4">
                     </video>
                     <div class="video-overlay">
                         <span class="play-indicator">Play preview</span>
                     </div>
                 </div>
-                <!-- Video 8 -->
-                <div class="video-card fade-in delay-1">
+
+                <!-- 17. AI Video (Img_1097) -->
+                <div class="video-card fade-in delay-2" data-category="ai-visuals">
                     <video muted loop playsinline
                         poster="https://res.cloudinary.com/dksrjgxdr/video/upload/v1772524032/Img_1097_r9hjas.jpg"
                         preload="metadata">
@@ -210,98 +353,106 @@
             <h2 class="section-title fade-in">What Clients Say</h2>
             <div class="testimonials-grid">
 
+                <!-- Testimonial 1: Ahmed - Founder Premier Express -->
                 <div class="testimonial-card fade-in">
                     <p class="quote">"SHANIB’s editing transformed our content entirely. The pacing is perfect, and our
                         engagement skyrocketed."</p>
                     <div class="client-info">
-                        <div class="client-avatar"></div>
+                        <div class="client-avatar">A</div>
                         <div class="client-details">
-                            <span class="client-name">Sarah Jenkins</span>
-                            <span class="client-role">Founder, TechSpace</span>
+                            <span class="client-name">Ahmed</span>
+                            <span class="client-role">Founder, Premier Express</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 2: Shafi - Founder Blueberry -->
                 <div class="testimonial-card fade-in delay-1">
                     <p class="quote">"Absolutely cinematic. Our brand feels premium and untouchable now thanks to these
                         video edits."</p>
                     <div class="client-info">
-                        <div class="client-avatar"></div>
+                        <div class="client-avatar">S</div>
                         <div class="client-details">
-                            <span class="client-name">David Thorne</span>
-                            <span class="client-role">CMO, Lumina</span>
+                            <span class="client-name">Shafi</span>
+                            <span class="client-role">Founder, Blueberry</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 3: Abi - Founder Swap -->
                 <div class="testimonial-card fade-in delay-2">
                     <p class="quote">"Highly professional. Delivered exact vision with incredible attention to detail.
                         Fast turnaround."</p>
                     <div class="client-info">
-                        <div class="client-avatar"></div>
+                        <div class="client-avatar">A</div>
                         <div class="client-details">
-                            <span class="client-name">Elena Rossi</span>
-                            <span class="client-role">Creator</span>
+                            <span class="client-name">Abi</span>
+                            <span class="client-role">Founder, Swap</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 4: Alu - Founder The Laban Spot -->
                 <div class="testimonial-card fade-in">
                     <p class="quote">"The level of thought put into every cut is extraordinary. It feels intentional,
                         never rushed."</p>
                     <div class="client-info">
-                        <div class="client-avatar"></div>
+                        <div class="client-avatar">A</div>
                         <div class="client-details">
-                            <span class="client-name">Michael Chang</span>
-                            <span class="client-role">Director, Velox</span>
+                            <span class="client-name">Alu</span>
+                            <span class="client-role">Founder, The Laban Spot</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 5: Basi - Founder Tree Fruit -->
                 <div class="testimonial-card fade-in delay-1">
                     <p class="quote">"I wanted high-end and luxurious, and that’s exactly what I got. Brilliant work and
                         a true partner."</p>
                     <div class="client-info">
-                        <div class="client-avatar"></div>
+                        <div class="client-avatar">B</div>
                         <div class="client-details">
-                            <span class="client-name">Aisha Patel</span>
-                            <span class="client-role">Design Studio</span>
+                            <span class="client-name">Basi</span>
+                            <span class="client-role">Founder, Tree Fruit</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 6: Saleel - Founder Mugal -->
                 <div class="testimonial-card fade-in delay-2">
                     <p class="quote">"Retention was our biggest issue. After working with SHANIB, our watch time
                         doubled."</p>
                     <div class="client-info">
-                        <div class="client-avatar"></div>
+                        <div class="client-avatar">S</div>
                         <div class="client-details">
-                            <span class="client-name">Tom Hardy</span>
-                            <span class="client-role">YouTuber</span>
+                            <span class="client-name">Saleel</span>
+                            <span class="client-role">Founder, Mugal</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 7: Taju - Founder Taj -->
                 <div class="testimonial-card fade-in">
                     <p class="quote">"Visually stunning quality. You won't find a better eye for modern, cinematic
                         pacing."</p>
                     <div class="client-info">
-                        <div class="client-avatar"></div>
+                        <div class="client-avatar">T</div>
                         <div class="client-details">
-                            <span class="client-name">Lila Monroe</span>
-                            <span class="client-role">Agency Owner</span>
+                            <span class="client-name">Taju</span>
+                            <span class="client-role">Founder, Taj</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Testimonial 8: Shabeen - Founder Alpha Care -->
                 <div class="testimonial-card fade-in delay-1">
                     <p class="quote">"An absolute game-changer. Elevates our ordinary footage into a cinematic
                         masterpiece."</p>
                     <div class="client-info">
-                        <div class="client-avatar"></div>
+                        <div class="client-avatar">S</div>
                         <div class="client-details">
-                            <span class="client-name">Jake O'Connor</span>
-                            <span class="client-role">Creative Lead</span>
+                            <span class="client-name">Shabeen</span>
+                            <span class="client-role">Founder, Alpha Care</span>
                         </div>
                     </div>
                 </div>

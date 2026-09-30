@@ -102,4 +102,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // --- WORK FILTER TABS ---
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const allVideoCards = document.querySelectorAll('.work-grid .video-card');
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            allVideoCards.forEach(card => {
+                const video = card.querySelector('video');
+                const category = card.getAttribute('data-category');
+
+                if (filter === 'all' || category === filter) {
+                    card.classList.remove('hidden');
+                    card.classList.add('visible');
+                } else {
+                    card.classList.add('hidden');
+                    if (video) {
+                        video.pause();
+                        video.currentTime = 0;
+                    }
+                }
+            });
+        });
+    });
+
 });
+
