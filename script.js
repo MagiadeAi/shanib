@@ -167,9 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             allVideoCards.forEach(card => {
                 const video = card.querySelector('video');
-                const category = card.getAttribute('data-category');
+                const categories = (card.getAttribute('data-category') || '').split(' ');
 
-                if (filter === 'all' || category === filter) {
+                if (filter === 'all' || categories.includes(filter)) {
                     card.classList.remove('hidden');
                     card.classList.add('visible');
                 } else {
