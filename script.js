@@ -70,11 +70,28 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- VIDEO HOVER TO PLAY ---
     const videoCards = document.querySelectorAll('.video-card');
 
+    // Helper: mute all videos and reset all sound buttons to muted state
+    function muteAllVideos() {
+        videoCards.forEach(c => {
+            const v = c.querySelector('video');
+            const btn = c.querySelector('.sound-toggle');
+            if (v) v.muted = true;
+            if (btn) {
+                btn.classList.remove('is-unmuted');
+                const iconMuted   = btn.querySelector('.icon-muted');
+                const iconUnmuted = btn.querySelector('.icon-unmuted');
+                if (iconMuted)   iconMuted.style.display   = '';
+                if (iconUnmuted) iconUnmuted.style.display = 'none';
+            }
+        });
+    }
+
     videoCards.forEach(card => {
         const video = card.querySelector('video');
+        const soundBtn = card.querySelector('.sound-toggle');
 
-        // Ensure videos are paused initially
-        if (video) video.pause();
+        // Ensure videos are muted & paused initially
+        if (video) { video.muted = true; video.pause(); }
 
         card.addEventListener('mouseenter', () => {
             // Only auto-play on desktop (width > 768px)
@@ -90,8 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Fallback for mobile: play on click
-        card.addEventListener('click', () => {
+        // Fallback for mobile: play on click (but not if sound button was clicked)
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.sound-toggle')) return; // handled below
             if (window.innerWidth <= 768 && video) {
                 if (video.paused) {
                     video.play();
@@ -100,6 +118,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
+
+        // --- SOUND TOGGLE LOGIC ---
+        if (soundBtn && video) {
+            soundBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // don't trigger card play/pause
+
+                const isCurrentlyMuted = video.muted;
+
+                if (isCurrentlyMuted) {
+                    // Unmute this video, mute all others first
+                    muteAllVideos();
+                    video.muted = false;
+                    soundBtn.classList.add('is-unmuted');
+                    soundBtn.querySelector('.icon-muted').style.display   = 'none';
+                    soundBtn.querySelector('.icon-unmuted').style.display = '';
+
+                    // Make sure it's actually playing so sound is heard
+                    if (video.paused) {
+                        video.play().catch(err => console.warn('Autoplay blocked:', err));
+                    }
+                } else {
+                    // Already unmuted → mute it
+                    video.muted = true;
+                    soundBtn.classList.remove('is-unmuted');
+                    soundBtn.querySelector('.icon-muted').style.display   = '';
+                    soundBtn.querySelector('.icon-unmuted').style.display = 'none';
+                }
+            });
+
+            // When this video ends or pauses, also reset sound icon
+            video.addEventListener('pause', () => {
+                if (!video.muted) return; // only if we externally muted
+            });
+        }
     });
 
     // --- WORK FILTER TABS ---

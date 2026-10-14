@@ -580,6 +580,65 @@ span {
     transform: scale(1);
 }
 
+/* --- SOUND TOGGLE BUTTON --- */
+.sound-toggle {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    z-index: 4;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(11, 11, 13, 0.70);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
+    pointer-events: all;
+}
+
+.video-card:hover .sound-toggle {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Always visible on mobile */
+@media (max-width: 768px) {
+    .sound-toggle {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sound-toggle:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.15);
+}
+
+.sound-toggle.is-unmuted {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.sound-toggle svg {
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
 /* --- TRUSTED BRANDS --- */
 .brands-section {
     padding: 100px 0 80px;
